@@ -48,6 +48,7 @@ public class stepdefinitions extends utilities{
 	public void user_calls_with_post_http_request(String resource,String method) {
 		Api_resources resourceapi=Api_resources.valueOf(resource); // this will get value from API_resources class for resource which it receives in this method
 		System.out.println(resourceapi.getResource());
+		System.out.println("Resources which are being triggered:" + resourceapi.getResource());
 		if(method.equalsIgnoreCase("POST"))
 		 res=req1.when().post(resourceapi.getResource()); //respon is having all the response specification 
 		else if(method.equalsIgnoreCase("GET"))
